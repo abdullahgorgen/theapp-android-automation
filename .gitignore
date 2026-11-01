@@ -1,0 +1,28 @@
+### Maven ###
+target/
+
+### Gauge ###
+.gauge/
+logs/
+reports/
+
+### Application under test ###
+apps/*.apk
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+out/
+
+### VS Code ###
+.vscode/
+
+### Eclipse ###
+.classpath
+.project
+.settings/
+
+### OS ###
+.DS_Store
+Thumbs.db
+desktop.ini
