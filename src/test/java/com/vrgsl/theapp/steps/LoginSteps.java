@@ -39,6 +39,18 @@ public class LoginSteps {
                 .isEqualTo("You are logged in as " + username);
     }
 
+    @Step("Tap logout button")
+    public void tapLogout() {
+        loginPage = new SecretAreaPage().tapLogout();
+    }
+
+    @Step("Verify user is logged out")
+    public void verifyLoggedOut() {
+        assertThat(loginPage.isDisplayed())
+                .as("login screen is displayed")
+                .isTrue();
+    }
+
     @Step("Verify error message <message> is displayed")
     public void verifyErrorMessage(String message) {
         assertThat(loginPage.getErrorMessage())

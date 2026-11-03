@@ -8,4 +8,9 @@ public class SecretAreaPage extends BasePage {
     public String getLoggedInMessage() {
         return getText("loggedInMessage");
     }
+
+    public LoginPage tapLogout() {
+        click("logoutButton");
+        return new LoginPage();
+    }
 }

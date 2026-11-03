@@ -2,6 +2,7 @@ package com.vrgsl.theapp.pages;
 
 import com.vrgsl.theapp.driver.DriverManager;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -31,5 +32,15 @@ public abstract class BasePage {
 
     protected String getText(String key) {
         return waitForVisible(key).getText();
+    }
+
+    // Returns false instead of throwing, so the caller can assert on the result
+    protected boolean isVisible(String key) {
+        try {
+            waitForVisible(key);
+            return true;
+        } catch (TimeoutException e) {
+            return false;
+        }
     }
 }

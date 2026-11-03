@@ -1,10 +1,12 @@
 # Login Suite
 
-## TC001 - Log in with valid username and valid password
+## TC001 - Log in and log out with valid username and valid password
 Tags: login, smoke, regression
 
 * Log in with username "alice" and password "mypassword"
 * Verify user is logged in as "alice"
+* Tap logout button
+* Verify user is logged out
 
 ## TC002 - Log in with valid username and wrong password
 Tags: login, negative, regression
