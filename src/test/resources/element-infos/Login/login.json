@@ -1,0 +1,22 @@
+[
+  {
+    "key": "usernameField",
+    "type": "accessibilityId",
+    "value": "username"
+  },
+  {
+    "key": "passwordField",
+    "type": "accessibilityId",
+    "value": "password"
+  },
+  {
+    "key": "loginButton",
+    "type": "accessibilityId",
+    "value": "loginBtn"
+  },
+  {
+    "key": "loginErrorMessage",
+    "type": "id",
+    "value": "android:id/message"
+  }
+]
